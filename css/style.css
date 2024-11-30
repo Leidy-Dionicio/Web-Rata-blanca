@@ -1,0 +1,696 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: #000; /* Fondo negro para el encabezado */
+    color: white; /* Texto en blanco */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white; /* Enlaces en blanco */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+main {
+    padding: 20px;
+}
+
+/* Estilos generales para imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media query para pantallas de 1024px o más */
+@media (min-width: 1024px) {
+    .image-container img {
+        max-width: 90%; /* Puedes ajustar este valor para tener más control */
+        margin: auto;
+    }
+}
+
+/* Media query para pantallas de entre 768px y 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .image-container img {
+        max-width: 95%; /* Ajusta según sea necesario */
+    }
+}
+.section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Espaciado entre columnas */
+  }
+  
+/* Ajustes para dispositivos entre 480px y 768px */
+@media (min-width: 480px) and (max-width: 768px) {
+    body {
+      padding: 10px;
+      font-size: 16px; /* Ajuste de tamaño de fuente */
+    }
+    .header {
+      padding: 15px;
+      font-size: 24px; /* Ajuste del tamaño de encabezados */
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr; /* Cambiar a una sola columna para mejor visualización */
+      gap: 20px; /* Espaciado entre elementos */
+    }
+    img {
+      width: 100%; /* Las imágenes se adaptan al ancho del contenedor */
+      height: auto;
+    }
+  }
+  
+
+/* Media query para pantallas de menos de 480px */
+@media (max-width: 480px) {
+    .image-container img {
+        max-width: 100%; /* La imagen se adapta completamente al contenedor */
+        margin: auto;
+    }
+}
+
+
+/* Estilos para la sección de Los Orígenes de Rata Blanca */
+#historia {
+    background-color: #121212; /* Fondo oscuro elegante */
+    color: #f0f0f0; /* Texto claro para contraste */
+    padding: 50px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombras para darle profundidad */
+    max-width: 1000px;
+    text-align: center;
+}
+
+/* Estilo del título */
+#historia h2 {
+    font-family: 'Cinzel', serif; /* Estilo de fuente elegante que refleja la época medieval, como en el logo de la banda */
+    font-size: 36px;
+    color: #ffcc00; /* Color dorado, que evoca el estilo rockero y sofisticado */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilos para la imagen de la sección */
+.imagen-origenes {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    border: 5px solid #ffcc00; /* Marco dorado elegante alrededor de la imagen */
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en la imagen para darle dinamismo */
+.imagen-origenes:hover {
+    transform: scale(1.05); /* Agranda ligeramente al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(255, 204, 0, 0.5); /* Sombra amarilla */
+}
+
+/* Estilo del párrafo */
+#historia p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+    color: #dddddd; /* Texto en gris claro para un contraste más suave */
+}
+
+/* Estilo de la sección de la línea de tiempo */
+.timeline {
+    position: relative;
+    margin: 40px auto;
+    padding: 20px 0;
+    max-width: 900px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #ffcc00; /* Línea amarilla que simboliza el estilo de la banda */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.container.left {
+    left: 0;
+}
+
+.container.right {
+    left: 50%;
+}
+
+.container .content {
+    padding: 20px;
+    background-color: #1e1e1e; /* Fondo oscuro elegante */
+    position: relative;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px solid #ffcc00; /* Bordes amarillos */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra más profunda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container .content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 204, 0, 0.7); /* Efecto hover más interactivo */
+}
+
+.timeline h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Texto dorado */
+}
+
+.timeline p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #dddddd;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Círculos en la línea de tiempo */
+.container:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: #ffcc00;
+    border: 4px solid #1e1e1e;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.container.right:before {
+    left: -10px;
+}
+
+.container.left:before {
+    right: -10px;
+}
+
+/* Efecto alternado para izquierda y derecha */
+.container.left .content {
+    transform: translateX(-100%);
+}
+
+.container.right .content {
+    transform: translateX(100%);
+}
+
+/* Animaciones */
+.container.left .content, .container.right .content {
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo responsivo */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        left: 0;
+    }
+
+    .timeline:before {
+        left: 20px;
+    }
+
+    .container:before {
+        left: 15px;
+    }
+
+    .container.left .content, .container.right .content {
+        transform: translateX(0);
+        animation: none;
+    }
+}
+
+
+/* Efecto alternante para izquierda y derecha */
+.container.left .content {
+    transform: translateX(-100%);
+}
+
+.container.right .content {
+    transform: translateX(0%);
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #ffcc00;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+/* Efecto para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .container.left, .container.right {
+        left: 0;
+        width: 100%;
+    }
+    .container.left .content, .container.right .content {
+        transform: none;
+    }
+
+    .timeline-container {
+        padding: 10px; /* Ajusta el espaciado para pantallas pequeñas */
+    }
+
+    .timeline-item {
+        width: 100%; /* Asegura que los elementos se adapten a pantallas pequeñas */
+        margin-bottom: 20px; /* Espacio entre elementos */
+    }
+}
+
+
+/* Sección de la línea de tiempo */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+
+/* Línea vertical central */
+.timeline:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #ffcc00; /* Amarillo característico */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-container {
+    max-width: 100%; /* El contenedor se ajusta al 100% del ancho de su padre */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+}
+
+.timeline-item {
+    width: 100%; /* Los elementos ocupan el 100% del contenedor */
+    box-sizing: border-box; /* Asegura que el padding y border no afecten el ancho */
+}
+
+
+/* Contenedor de cada evento */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* Posicionamiento de los eventos a la izquierda y derecha */
+.container.left {
+    left: 0;
+}
+
+.container.right {
+    left: 50%;
+}
+
+/* Estilo del contenido de cada evento */
+.container .content {
+    padding: 20px;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    position: relative;
+    border-radius: 10px;
+    color: #ddd;
+    border: 2px solid #ffcc00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* Estilo al pasar el mouse por los eventos */
+.container .content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 204, 0, 0.6);
+}
+
+/* Título de cada evento */
+.timeline h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    color: #ffcc00; /* Dorado */
+}
+
+/* Texto descriptivo */
+.timeline p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Círculos para marcar los eventos */
+.container:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: #ffcc00;
+    border: 4px solid #1e1e1e;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.container.right:before {
+    left: -10px;
+}
+
+.container.left:before {
+    right: -10px;
+}
+
+/* Animación para los eventos al hacer scroll */
+.container.left .content, .container.right .content {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.container.right .content {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Sección Discografía */
+#discografia {
+    background-color: #000; /* Fondo negro para la discografía */
+    color: white; /* Texto en blanco */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    text-align: center; /* Centra el texto dentro de la sección */
+}
+
+.album-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    max-width: 100%; /* Se asegura de que el contenedor no exceda el ancho de su padre */
+    overflow: hidden;
+}
+
+.timeline-item {
+    width: 100%; /* Los elementos ocupan el 100% del contenedor */
+    box-sizing: border-box; /* Asegura que el padding y border no afecten el ancho */
+}
+
+.album {
+    width: 150px; /* Ancho de las imágenes de álbum */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.album:hover {
+    transform: scale(1.05); /* Efecto al pasar el mouse */
+}
+
+#discografia h2 {
+    font-size: 28px; /* Tamaño de fuente del título */
+    margin-bottom: 20px;
+    font-family: 'Cinzel', serif; /* Tipografía elegante */
+    color: #ffcc00; /* Color dorado para el título */
+}
+
+/* Sección Momentos Inolvidables */
+#galeria {
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto oscuro */
+    padding: 40px;
+    text-align: center; /* Centra el texto */
+    margin-bottom: 40px;
+}
+
+#galeria h2 {
+    font-family: 'Cinzel', serif; /* Tipografía elegante */
+    font-size: 32px;
+    color: #000; /* Título en negro */
+    margin-bottom: 20px;
+}
+
+#galeria p {
+    font-family: 'Open Sans', sans-serif; /* Tipografía legible */
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555; /* Texto gris oscuro */
+}
+
+/* Sección Momentos Inolvidables */
+#galeria {
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Texto oscuro */
+    padding: 40px;
+    text-align: center; /* Centra el texto */
+    margin-bottom: 40px;
+}
+
+#galeria h2 {
+    font-family: 'Cinzel', serif; /* Tipografía elegante */
+    font-size: 32px;
+    color: #000; /* Título en negro */
+    margin-bottom: 20px;
+}
+
+#galeria p {
+    font-family: 'Open Sans', sans-serif; /* Tipografía legible */
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555; /* Texto gris oscuro */
+}
+
+/* Sección Galería: Momentos Inolvidables */
+#galeria {
+    background-color: #111;
+    color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#galeria h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#galeria p {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    padding: 10px; /* Espacio adicional alrededor del contenido */
+    background-color: #222; /* Fondo adicional para resaltar el margen */
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+}
+
+.galeria-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.galeria-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    color: #ffffff; /* Texto blanco en lugar de dorado para mejor contraste */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.galeria-item:hover .galeria-info {
+    opacity: 1;
+}
+
+.galeria-info h3 {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+}
+
+.galeria-info p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #fff; /* Texto blanco al pasar el mouse */
+}
+
+
+/* Video de la galería */
+.galeria-video {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.galeria-video h3 {
+    font-size: 28px;
+    font-family: 'Cinzel', serif;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.galeria-video video {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Sección Contacto */
+#contacto {
+    background-color: #000; /* Fondo negro para el contacto */
+    color: white; /* Texto en blanco */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#contacto form {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #f39c12; /* Color de botón */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #e67e22; /* Color de botón al pasar el mouse */
+}
+
+/* Footer */
+footer {
+    background-color: #000; /* Fondo negro para el footer */
+    color: white; /* Texto en blanco */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
